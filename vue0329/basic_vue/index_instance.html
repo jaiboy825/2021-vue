@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        {{name}}
+        <button @click="changeText()">Click</button>
+    </div>
+    <div id="app1">
+        {{name}}
+        <button @click="changeText()">Click</button>    
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+              name:'홍길동',
+            
+
+            },
+            methods: {
+                changeText() {
+                    this.name = '청길동';
+                }
+            }
+        });
+        new Vue({
+            el: '#app1',
+            data: {
+              name:'청길동',
+            
+
+            },
+            methods: {
+                changeText() {
+                    this.name = '적길동';
+                }
+            }
+        })
+    </script>
+</body>
+</html>

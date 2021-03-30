@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        {{person.name}} <br>
+        {{person.age}} <br>
+        {{nextYear('hello')}} <br>
+        <input v-bind:type="type" v-bind:value="inputData">
+        <a :href="link" target="_blank">google</a>
+        <a :href="getChannelLink('watch?v=zWr4F82u8YE')">양디고 홍보동영상</a>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                person : {
+                    name : 'yyhs',
+                    age : 34
+                }, 
+                inputData:'hello',
+                type : 'text',
+                link : 'http://www.google.co.kr',
+                clink : 'https://www.youtube.com/'  
+            },
+            methods: {
+                nextYear : function(greeting){
+                    return greeting + '! ' + this.person.name + '는 내년에' + (this.person.age + 1) + '살입니다'
+                },
+                getChannelLink(channel){
+
+                this.channel = this.clink + channel;
+                return this.channel;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
