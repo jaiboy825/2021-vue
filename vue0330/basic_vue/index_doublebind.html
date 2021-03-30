@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="submit"> <br>
+            <input type="text" v-model="text"> <br>
+            {{text}} <br>
+            <button type="submit">제출</button>
+        </form>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                year: 2021,
+                text: 'text11'
+            },
+            methods: {
+                submit() {
+                    alert('submited - 제출됨.');
+                    console.log(this.text);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
