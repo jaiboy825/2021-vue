@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+     {{people[0].name}}{{people[0].age}}
+     {{people[1].name}}{{people[1].age}}
+     {{people[2].name}}{{people[2].age}}
+    <hr>
+    <div v-for="person in people" >
+        {{person.name}}-{{person.age}}, {{person.tel}}
+
+    </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+              people : [
+                  {name : 'kim', age : 20, tel : '010-1234-1234'},
+                  {name : 'kims', age : 21, tel : '010-1234-1234'},
+                  {name : 'kimss', age : 22, tel : '010-1234-1234'}
+              ]
+
+            },
+            methods: {
+                
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        {{show}} <br>
+        <div v-if="show">yes</div>
+        <div v-else>no</div>
+        <template v-if="number === 1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </template>
+        <div v-else-if="number === 2">
+            gg
+        </div>
+        <button @click="increaseNumber">Toggle</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                number : 1
+
+            },
+            methods: {
+                increaseNumber(){
+                    this.number++
+                }
+            }
+        })
+    </script>
+</body>
+</html>

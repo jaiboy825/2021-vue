@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        {{show}} <br>
+        <div v-if="show">yes</div>
+        <div v-else>no</div>
+        <template v-if="show">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </template>
+        <button @click="toggleShow">Toggle</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                show: true
+
+            },
+            methods: {
+                toggleShow(){
+                    this.show = !this.show;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
