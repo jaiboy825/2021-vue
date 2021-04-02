@@ -3,19 +3,22 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>Vue Component</h1>
-    <Currency/>
+    <!-- <Currency/> -->
+    <basic/>
   </div>  
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-  import Currency from './components/A01.Currency'
+  // import Currency from './components/A01.Currency'
+  import basic from './components/02binding.vue';
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    Currency
+    // Currency
+    basic
   }
 }
 </script>
