@@ -3,6 +3,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <Currency/> -->
     <h1>Vue Components</h1>
+    <A06></A06>
     <A05></A05>
     <A04></A04>
     <A03></A03>
@@ -17,6 +18,7 @@ import basic from "./components/02binding.vue";
 import A03 from "./components/A03.Repeater.vue";
 import A04 from "./components/A04.LifeCycle.vue";
 import A05 from "./components/A05.Event.vue";
+import A06 from "./components/A06.StyleClass.vue";
 export default {
   name: "App",
   components: {
@@ -25,7 +27,8 @@ export default {
     basic,
     A03,
     A04,
-    A05
+    A05,
+    A06
   }
 };
 </script>
