@@ -1,26 +1,33 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <h1>Vue Component</h1>
     <!-- <Currency/> -->
-    <basic/>
-  </div>  
+    <h1>Vue Components</h1>
+    <A05></A05>
+    <A04></A04>
+    <A03></A03>
+    <basic></basic>
+  </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-  // import Currency from './components/A01.Currency'
-  import basic from './components/02binding.vue';
-
+// import Currency from './components/A01.Currency'
+import basic from "./components/02binding.vue";
+import A03 from "./components/A03.Repeater.vue";
+import A04 from "./components/A04.LifeCycle.vue";
+import A05 from "./components/A05.Event.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // HelloWorld
     // Currency
-    basic
+    basic,
+    A03,
+    A04,
+    A05
   }
-}
+};
 </script>
 
 <style>
@@ -28,8 +35,13 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1 {
+  color: lightsalmon;
+}
+body {
+  padding-left: 20px;
 }
 </style>
