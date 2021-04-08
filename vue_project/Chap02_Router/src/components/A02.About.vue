@@ -5,13 +5,15 @@
         <br>
         <br>
 
-        Name: 
+        Name: {{name}} / Id : {{id}}
+
     </div>
 </template>
 
 <script>
 export default {
-    name: 'About'
+    name: 'About',
+    props : ['name', 'id']
 }
 </script>
 
